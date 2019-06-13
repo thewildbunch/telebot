@@ -7,7 +7,10 @@ cities = {
     "Moscow": ["55.75396", "37.620393"],
     "SaintPetersburg": ["59.939095", "30.315868"],
     "Sochi": ["43.585525", "39.723062"],
-    "Peterhof": ["59.883330", "29.900"]
+    "Peterhof": ["59.883330", "29.900"],
+    "London": ["51.5073509", "-0.1277583"],
+    "Berlin": ["52.5200066", "13.404954"],
+    "Karaganda": ["49.8333300", "73.1658000"]
 }
 
 
@@ -63,7 +66,7 @@ bot = telebot.TeleBot("894480080:AAH5CGQulI-y00ldJxJN7YPDsizRmszw_Jg")
 
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
-    bot.reply_to(message, "Howdy, how are you doing?")
+    bot.reply_to(message, "Hello there ladies and gentleman!")
 
 
 @bot.message_handler(commands=['get_weather'])
