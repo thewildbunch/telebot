@@ -4,10 +4,10 @@ import telebot
 
 
 cities = {
-    "Moscow": ["55.75396", "37.620393"]
-    "SaintPetersburg": ["59.939095","30.315868"]
-    "Sochi": ["43.585525","39.723062"]
-    "Peterhof": ["59.883330","29.900"]
+    "Moscow": ["55.75396", "37.620393"],
+    "SaintPetersburg": ["59.939095", "30.315868"],
+    "Sochi": ["43.585525", "39.723062"],
+    "Peterhof": ["59.883330", "29.900"]
 }
 
 
@@ -70,7 +70,7 @@ def send_welcome(message):
 def send_tomorrow_weather(message):
     text = message.text.split()[1]
     if text not in cities.keys():
-        bot.reply_to(message, "invalid command")
+        bot.reply_to(message, "invalid city")
         return
     coords = cities[text]
     result = get_weather(coords[0], coords[1])
