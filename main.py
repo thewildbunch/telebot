@@ -49,7 +49,7 @@ def parse_answer(weather_answer):
         if int(tom_d) > int(i["date_ts"]):
             cws = i["parts"]["day_short"]
     if cws != 0:
-        res_str += "Temperature:" + str(cws["temp"])
+        res_str += "Temperature: " + str(cws["temp"])
         res_str += "\nWind speed: " + str(cws["wind_speed"])
         res_str += "\nWind direction " + str(cws["wind_dir"])
         res_str += "\n" + str(cws["condition"])
@@ -83,7 +83,7 @@ def send_tomorrow_weather(message):
 
 @bot.message_handler(func=lambda message: True)
 def echo_all(message):
-    bot.reply_to(message, "И че?")
+    bot.reply_to(message, "Sorry? Try to type '/get_weather *Town_name*'.")
 
 
 # res = get_weather("55.75396", "37.620393")
